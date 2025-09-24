@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage("Docker Image"){
             steps{
-                sh "docker build -t kammana/pyappeks:${env.DOCKER_TAG} ."
+                sh "docker build . -t kammana/pyappeks:${env.DOCKER_TAG}"
             }
         }
         stage("Pust To Docker Hub"){
