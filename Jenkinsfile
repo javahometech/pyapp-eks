@@ -37,5 +37,5 @@ pipeline{
 }
 
 def getLatestCommitId() {
-    return sh(script: "git rev-parse --short HEAD", returnStdout: true)
+    return sh(script: "git rev-parse --short HEAD", returnStdout: true).trim()
 }
