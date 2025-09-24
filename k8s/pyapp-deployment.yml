@@ -16,7 +16,6 @@ spec:
     spec:
       containers:
         - name: pyapp
-          image: |
-            kammana/pyappeks:286597f
+          image: kammana/pyappeks:286597f
           ports:
             - containerPort: 8000
