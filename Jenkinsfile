@@ -24,6 +24,7 @@ pipeline{
                      git config user.name "Jenkins Server"
                      git config user.email "jenkins@automation.com"
                      git checkout main
+                     git pull origin main
                      yq e '.spec.template.spec.containers[0].image = "kammana/pyappeks:${env.DOCKER_TAG}"' -i ./k8s/pyapp-deployment.yml
                      git add .
                      git commit -m 'Docker tag updated by jenkins'
